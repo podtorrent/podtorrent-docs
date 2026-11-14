@@ -1,5 +1,8 @@
 # What you need
 
+For the agent, next to your own engine. Using the
+[PodTorrent app](podtorrent-app.md) instead? It has its own requirements.
+
 ## An OpenAI-compatible engine
 
 vLLM, TensorRT-LLM, SGLang, llama.cpp server, Ollama, or anything else that
@@ -24,8 +27,13 @@ are private options. See [Choose a connection mode](connection-modes/README.md).
 
 ## A node token
 
-The PodTorrent team gives you one per node. It's how the network knows which
-node is connecting. Keep it secret, and ask for a new one if it leaks.
+Each node needs its own id and token. Register at
+[podtorrent.com/register-node](https://podtorrent.com/register-node); once
+approved, get the token on the operator dashboard's **Nodes** tab, where you
+can also add more nodes. See
+[Get a node id and token](../getting-started/node-quickstart.md#first-get-a-node-id-and-token).
+It's how the network knows which node is connecting. Keep it secret, and make
+a new one on the same tab if it leaks.
 
 ## What the agent does not need
 
