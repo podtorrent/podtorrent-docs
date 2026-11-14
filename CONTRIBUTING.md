@@ -1,7 +1,7 @@
 # Editing the public docs
 
 This folder is the source of `docs.podtorrent.com`, a GitBook space synced
-from this folder (`.gitbook.yaml`; `SUMMARY.md` is the sidebar).
+from this folder (`gitbook-docs.yaml`; `SUMMARY.md` is the sidebar).
 
 - Public audience: API clients and node operators. Internal operations
   (deploys, secrets, Cloudflare setup) stay in `../docs/`.
