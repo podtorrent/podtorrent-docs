@@ -9,7 +9,7 @@ it then come to you first, and you do less work per request.
 The id is the SHA-256 of the opening messages. Clients get it from
 `POST /v1/prompts` and share it with you, or the PodTorrent team can give it
 to you. You can also compute it yourself; the formula is in the
-[protocol spec](https://github.com/Munerate/podtorrent-agent/blob/main/spec/protocol-v0.md#cached-prompts).
+[protocol spec](https://github.com/podtorrent/podtorrent-agent/blob/main/spec/protocol-v0.md#cached-prompts).
 
 ## 2. Add it to your manifest
 

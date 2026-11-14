@@ -42,7 +42,7 @@ docker run -d --name podtorrent-agent --restart unless-stopped \
   --read-only --cap-drop ALL --security-opt no-new-privileges \
   -e PODTORRENT_NODE_TOKEN=... \
   -v /etc/podtorrent/manifest.json:/manifest.json:ro \
-  ghcr.io/munerate/podtorrent-agent:v0.2.0 \
+  ghcr.io/munerate/podtorrent-agent:v0.5.0 \
   -manifest /manifest.json -engine http://engine:8000
 ```
 
@@ -63,6 +63,6 @@ networking.
 
 Stop the agent, replace the binary or image tag, start it again. Requests
 in flight on the old process are lost, so upgrade at a quiet time. Releases
-are listed on [GitHub](https://github.com/Munerate/podtorrent-agent/releases).
+are listed on [GitHub](https://github.com/podtorrent/podtorrent-agent/releases).
 Use v0.2.0 or newer: older agents don't send [receipts](../concepts/receipts-and-billing.md),
 so their work isn't paid.

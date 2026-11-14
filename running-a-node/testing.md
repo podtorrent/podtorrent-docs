@@ -6,7 +6,7 @@ end to end on your own machine before connecting to PodTorrent.
 ## Rehearse with the mock network
 
 ```bash
-git clone https://github.com/Munerate/podtorrent-agent
+git clone https://github.com/podtorrent/podtorrent-agent
 cd podtorrent-agent
 make build
 

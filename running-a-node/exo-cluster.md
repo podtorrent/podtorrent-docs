@@ -84,4 +84,4 @@ models.
   so can every Mac in your cluster. See [Privacy](../concepts/privacy.md).
 
 Full guide and troubleshooting:
-[Serve from an exo cluster](https://github.com/Munerate/podtorrent-agent/blob/main/docs/exo.md).
+[Serve from an exo cluster](https://github.com/podtorrent/podtorrent-agent/blob/main/docs/exo.md).

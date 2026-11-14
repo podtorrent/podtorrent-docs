@@ -2,7 +2,7 @@
 
 The agent and the network talk over a WebSocket using a small JSON protocol,
 version 0. The spec is public and is the source of truth:
-[spec/protocol-v0.md](https://github.com/Munerate/podtorrent-agent/blob/main/spec/protocol-v0.md).
+[spec/protocol-v0.md](https://github.com/podtorrent/podtorrent-agent/blob/main/spec/protocol-v0.md).
 
 You only need it if you're writing your own agent. Any program that follows
 the spec is a valid node; `podtorrent-agent` is the reference

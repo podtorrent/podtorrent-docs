@@ -76,7 +76,7 @@ your setup:
 More detail: [Write your manifest](../running-a-node/manifest.md).
 
 **3. Run the agent.** Download it for your platform from
-[GitHub Releases](https://github.com/Munerate/podtorrent-agent/releases)
+[GitHub Releases](https://github.com/podtorrent/podtorrent-agent/releases)
 (or use the container: [Install the agent](../running-a-node/install.md)),
 then:
 
