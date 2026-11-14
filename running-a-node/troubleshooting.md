@@ -7,7 +7,7 @@
 | `PODTORRENT_NODE_TOKEN is not set` | No token | Set the environment variable |
 | `engine at ... not reachable` | Engine isn't listening at `-engine`, or the container can't reach it | Check the URL and Docker network |
 | `engine ... does not list these manifest models` | Model ids don't match | Make `models[].id` match `/v1/models` exactly |
-| `link down, reconnecting ... 401` | Wrong or revoked node token | Check the token, or ask the team for a new one |
+| `link down, reconnecting ... 401` | Wrong or revoked node token | Check the token, or make a new one on the operator dashboard's **Nodes** tab |
 | `link down, reconnecting ... dial` | Can't reach the network | Check the firewall and any proxy for outbound 443 |
 | `request failed ... engine unreachable` | Engine stopped or restarted mid-request | Check your engine's health |
 

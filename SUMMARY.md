@@ -20,6 +20,7 @@
 ## Running a node
 
 * [What you need](running-a-node/requirements.md)
+* [Use the PodTorrent app](running-a-node/podtorrent-app.md)
 * [Install the agent](running-a-node/install.md)
 * [Write your manifest](running-a-node/manifest.md)
 * [Set prices and tiers](running-a-node/prices-and-tiers.md)
@@ -44,7 +45,7 @@
 ## For operators
 
 * [Bring your own clients](operators/own-clients.md)
-* [Operator dashboard (preview)](operators/dashboard.md)
+* [Operator dashboard](operators/dashboard.md)
 
 ## Reference
 

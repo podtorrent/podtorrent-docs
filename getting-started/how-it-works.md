@@ -18,6 +18,9 @@ The agent keeps a link open to the gateway, so the node needs no open ports.
   OpenAI-compatible inference engine.
 * **The agent** is a small program the operator runs next to their engine.
   It keeps a link open to the gateway and passes requests through.
+* **The [PodTorrent app](../running-a-node/podtorrent-app.md)** is the other
+  way to run a node: it splits a model's layers across machines and serves
+  it, with no engine of your own.
 
 ## What happens to one request
 

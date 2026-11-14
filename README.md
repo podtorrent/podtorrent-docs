@@ -4,21 +4,22 @@ PodTorrent is a network of independent machines that run AI models. You send
 an ordinary OpenAI-style request. We pick a machine that serves the model,
 send it the request, and stream the answer back to you.
 
-There are two ways to take part:
+## Ways to take part
 
-* **Use the API.** You have an app that needs a language model. Point any
-  OpenAI SDK at `https://api.podtorrent.com/v1` and use a PodTorrent API key.
-* **Run a node.** You have GPUs and an inference engine (vLLM, SGLang,
-  llama.cpp server, Ollama and so on). Run the small PodTorrent agent next to
-  it, set your price, and the network sends you work.
+| | What it is | Start here |
+| --- | --- | --- |
+| **Use the API** | Call models from your code with any OpenAI SDK, at `https://api.podtorrent.com/v1` | [Send your first request](getting-started/quickstart.md) |
+| **Run a node: agent** | A lightweight Go program that runs next to the model server you already have (vLLM, SGLang, llama.cpp server, Ollama…) | [Connect a node](getting-started/node-quickstart.md) |
+| **Run a node: PodTorrent app** | Splits a model's layers across machines and serves it on the network. No model server needed | [Use the PodTorrent app](running-a-node/podtorrent-app.md) |
+| **Run a node: exo cluster** | Several Macs as one node, with the agent | [Serve from several Macs with exo](running-a-node/exo-cluster.md) |
 
-## Where to start
+Nodes set their own price, or serve free.
+
+## Also useful
 
 | I want to… | Read |
 | --- | --- |
 | Understand the moving parts | [How PodTorrent works](getting-started/how-it-works.md) |
-| Call a model from my code | [Quickstart: send your first request](getting-started/quickstart.md) |
-| Connect my hardware | [Quickstart: connect a node](getting-started/node-quickstart.md) |
 | Look up an endpoint or field | [API reference](reference/api.md), [Manifest reference](reference/manifest.md) |
 
 {% hint style="info" %}
