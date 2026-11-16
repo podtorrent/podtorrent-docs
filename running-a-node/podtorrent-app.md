@@ -24,8 +24,8 @@ Already run a model server? Use the
   | `linux-arm64-jetson-headless` | NVIDIA Jetson AGX Orin over SSH (JetPack 6 or 7) |
 
 * Disk space for the model layers you serve (often 10–60 GB). The AMD builds
-  also install PyTorch for your GPU the first time (about 25 GB). The Jetson build installs NVIDIA's PyTorch for Jetson (about
-  10 GB of free disk).
+  also install PyTorch for your GPU the first time (about 25 GB). The Jetson
+  build installs PyTorch for your JetPack the first time (about 10 GB).
 * A node id and token. See
   [Get a node id and token](../getting-started/node-quickstart.md#first-get-a-node-id-and-token).
 
