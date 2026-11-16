@@ -12,7 +12,7 @@ Get a node id and token, then connect with one of these:
 | Use it if | You run vLLM, SGLang, llama.cpp server, Ollama or similar | You don't run a model server, or a model is too big for one machine |
 | Models | Whatever your server serves | Picked in the app, downloaded from Hugging Face |
 | Setup | A short manifest and one command | Click through, or `podtorrent setup` over SSH |
-| Runs on | Linux, macOS, Windows, container | macOS (Apple silicon), Windows and Linux (NVIDIA), Linux (AMD Ryzen AI Max) |
+| Runs on | Linux, macOS, Windows, container | macOS (Apple silicon), Windows and Linux (NVIDIA), Linux (AMD Ryzen AI Max), NVIDIA Jetson AGX Orin |
 
 Several Macs as one node? See [exo](../running-a-node/exo-cluster.md).
 
@@ -122,6 +122,7 @@ menu.
 | Linux desktop, NVIDIA | [podtorrent.com/download/linux-x64-cuda](https://podtorrent.com/download/linux-x64-cuda) |
 | Linux desktop, AMD Ryzen AI Max | [podtorrent.com/download/linux-x64-rocm](https://podtorrent.com/download/linux-x64-rocm) |
 | Linux over SSH, AMD Ryzen AI Max | [podtorrent.com/download/linux-x64-rocm-headless](https://podtorrent.com/download/linux-x64-rocm-headless) |
+| Linux over SSH, NVIDIA Jetson AGX Orin (JetPack 6 or 7) | [podtorrent.com/download/linux-arm64-jetson-headless](https://podtorrent.com/download/linux-arm64-jetson-headless) |
 
 Add `.sha256` to any of these links to get its checksum.
 {% endtab %}

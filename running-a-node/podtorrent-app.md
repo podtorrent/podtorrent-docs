@@ -21,9 +21,11 @@ Already run a model server? Use the
   | `linux-x64-cuda` | Linux desktop, NVIDIA |
   | `linux-x64-rocm` | Linux desktop, AMD Ryzen AI Max |
   | `linux-x64-rocm-headless` | Linux over SSH (no display), AMD Ryzen AI Max |
+  | `linux-arm64-jetson-headless` | NVIDIA Jetson AGX Orin over SSH (JetPack 6 or 7) |
 
 * Disk space for the model layers you serve (often 10–60 GB). The AMD builds
-  also install PyTorch for your GPU the first time (about 25 GB).
+  also install PyTorch for your GPU the first time (about 25 GB). The Jetson
+  build installs PyTorch for your JetPack the first time (about 10 GB).
 * A node id and token. See
   [Get a node id and token](../getting-started/node-quickstart.md#first-get-a-node-id-and-token).
 
@@ -92,6 +94,13 @@ downloads them, and offers to join the network. Afterwards:
 | `podtorrent top` | Live view of what this machine serves |
 | `podtorrent doctor` | Checks everything and writes one file for support, with your token removed |
 | `sudo loginctl enable-linger $USER` | Keep it running after you log out, and start it at boot |
+
+**NVIDIA Jetson AGX Orin.** The install command picks the Jetson build on a
+Jetson, and there is no desktop build for Jetson. You need JetPack 6 or 7
+(`cat /etc/nv_tegra_release` shows your L4T version: R36 is JetPack 6, R38 or
+R39 is JetPack 7), and your user in the `video` group. On another JetPack
+version, setup stops and says so. For the most GPU speed, set the maximum power
+mode first: `sudo nvpmodel -m 0 && sudo jetson_clocks`.
 
 ## Things to know
 
