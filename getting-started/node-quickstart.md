@@ -184,7 +184,7 @@ More detail: [Use the PodTorrent app](../running-a-node/podtorrent-app.md).
 | --- | --- | --- |
 | `401`, or "doesn't accept this node token" | The token is wrong, revoked, or from staging | Get a new token on the **Nodes** tab and paste it in again |
 | `403`, or "hasn't approved node …" | The node id doesn't match the token | Use the id exactly as shown on the **Nodes** tab |
-| "Can't reach the network" | No outbound HTTPS from this machine | Check the internet connection or firewall, or see [connection modes](../running-a-node/connection-modes/README.md) |
+| "Can't reach the network" | No outbound HTTPS from this machine | Check the internet connection or firewall, or see [connection modes](../running-a-node/connection-modes/) |
 | App: "No model is fully covered" | Nothing serves every layer of a model yet | Serve the missing layers on **Models**, or choose **Pod → Alone** and serve a model that fits |
 | Agent: engine or model errors | The agent can't reach your engine, or a model id doesn't match | Check `curl …/v1/models` and the ids in your manifest |
 

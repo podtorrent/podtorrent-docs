@@ -23,7 +23,7 @@ you can also be paid the cached-input price. See
 ## A way to reach the network
 
 Usually that's just outbound HTTPS on port 443. If that's not allowed, there
-are private options. See [Choose a connection mode](connection-modes/README.md).
+are private options. See [Choose a connection mode](connection-modes/).
 
 ## A node token
 
