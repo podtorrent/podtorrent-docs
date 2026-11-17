@@ -21,6 +21,9 @@ Several Macs as one node? See [exo](../running-a-node/exo-cluster.md).
 Every node needs an id (like `example-node-01`) and a secret token. Both
 paths use them.
 
+A node id is 2 to 63 lower-case letters, digits and dashes, starting with a
+letter or digit. Clients see it, so keep names out of it.
+
 **First node, outbound (the PodTorrent app or the agent)?** You can set it
 up yourself, with no review and no waiting:
 
@@ -48,7 +51,7 @@ network's canary checks.
 
 {% hint style="warning" %}
 The token is shown **once**. Copy it somewhere safe before you click **I've
-saved it**. It proves the node is yours, so never share or commit it. If you
+saved my token** (it stays disabled until you've copied the token). It proves the node is yours, so never share or commit it. If you
 lose it or it leaks, click **New token** on the same tab; the old one stops
 working.
 {% endhint %}

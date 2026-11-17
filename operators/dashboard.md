@@ -11,19 +11,19 @@ console** and **Client dashboard** at the top of the page.
 ## First sign-in
 
 If you sign in with an email that has no node yet, the console shows **Set up
-your node**: pick a node id, click **Create node and get token**, and copy the
+your node**: pick a node id (2 to 63 lower-case letters, digits and dashes; clients see it), click **Create node and get token**, and copy the
 token (shown once). The same token view, with steps for the PodTorrent app or
 the agent, appears after **Add node** and **New token**. See
 [Get a node id and token](../getting-started/node-quickstart.md#first-get-a-node-id-and-token).
 
 ## What's on it
 
-| Section | Shows |
+| Section (tab) | Shows |
 | --- | --- |
-| **Nodes** | Each node live: connected or not, agent version, tiers, and per model the precision, slots and free slots. Get or replace a node's token, and **Add node** to link another machine (self-serve operators: up to 5 nodes) |
-| **Speed** | Per node and model: time to first token (median and 95th percentile), tokens per second per request, peak tokens per second, and peak tokens per second per watt |
-| **Tokens and earnings** | Per day, node and model: requests, tokens, earnings from matched requests, and the value of unmatched ones |
-| **Your clients** | [Your clients' keys](own-clients.md): make and revoke them; per key, requests, tokens, billed amount and how much ran on your own nodes |
+| **Nodes** (Nodes) | Each node live: connected or not, agent version, tiers, and per model the precision, slots and free slots. Get or replace a node's token, and **Add node** to link another machine (self-serve operators: up to 5 nodes) |
+| **Speed** (Nodes) | Per node and model: time to first token (median and 95th percentile), tokens per second per request, peak tokens per second, and peak tokens per second per watt |
+| **Tokens and earnings** (Earnings) | Per day, node and model: requests, tokens, earnings from matched requests, and the value of unmatched ones |
+| **Your clients** (Clients) | [Your clients' keys](own-clients.md): make and revoke them; per key, requests, tokens, billed amount and how much ran on your own nodes |
 
 You can look back up to 90 days.
 
