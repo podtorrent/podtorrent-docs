@@ -27,10 +27,11 @@ are private options. See [Choose a connection mode](connection-modes/README.md).
 
 ## A node token
 
-Each node needs its own id and token. Register at
-[podtorrent.com/register-node](https://podtorrent.com/register-node); once
-approved, get the token on the operator dashboard's **Nodes** tab, where you
-can also add more nodes. See
+Each node needs its own id and token. Create one at
+[podtorrent.com/register-node](https://podtorrent.com/register-node). For
+outbound nodes you do it yourself and get the token at once; inbound nodes are
+reviewed first. You can add more nodes later on the operator dashboard's
+**Nodes** tab. See
 [Get a node id and token](../getting-started/node-quickstart.md#first-get-a-node-id-and-token).
 It's how the network knows which node is connecting. Keep it secret, and make
 a new one on the same tab if it leaks.

@@ -21,24 +21,37 @@ Several Macs as one node? See [exo](../running-a-node/exo-cluster.md).
 Every node needs an id (like `example-node-01`) and a secret token. Both
 paths use them.
 
-**First node?**
+A node id is 2 to 63 lower-case letters, digits and dashes, starting with a
+letter or digit. Clients see it, so keep names out of it.
 
-1. Fill in the short form at
-   [podtorrent.com/register-node](https://podtorrent.com/register-node). Use
-   the email you'll sign in with.
-2. We review it and email you your **node id** and a link to the operator
-   dashboard.
-3. Sign in at [dashboard.podtorrent.com/operator](https://dashboard.podtorrent.com/operator)
-   with that email (a one-time code, no password). On the **Nodes** tab, click
-   **Get node token** next to your node.
+**First node, outbound (the PodTorrent app or the agent)?** You can set it
+up yourself, with no review and no waiting:
+
+1. Go to [podtorrent.com/register-node](https://podtorrent.com/register-node)
+   ("Run a node"), choose **PodTorrent app** or **Agent, outbound**, and click
+   **Continue with email**.
+2. Sign in on the operator console with your email (a one-time code, no
+   password).
+3. Under **Set up your node**, check the suggested node id (random, like
+   `swift-servo-42`; edit it, or click **Shuffle** for another). Clients see
+   this id, so keep names out of it.
+4. Click **Create node and get token**, copy the token, and follow the app or
+   agent steps shown next to it.
+
+**Inbound node (a public address, Cloudflare Tunnel or WireGuard)?** Fill in
+the short form on the same page. We review it and email you your **node id**
+and a link to the operator console. Sign in there, and on the **Nodes** tab
+click **Get node token** next to your node.
 
 **Already an operator?** On the **Nodes** tab, type a new id under **Add a
 node** and click **Add node**. You get its token right away; no new
-registration.
+registration. Self-serve operators can link up to 5 nodes; ask us to raise
+that. New nodes start unverified, like every node: trust builds from the
+network's canary checks.
 
 {% hint style="warning" %}
 The token is shown **once**. Copy it somewhere safe before you click **I've
-saved it**. It proves the node is yours, so never share or commit it. If you
+saved my token** (it stays disabled until you've copied the token). It proves the node is yours, so never share or commit it. If you
 lose it or it leaks, click **New token** on the same tab; the old one stops
 working.
 {% endhint %}
@@ -139,7 +152,7 @@ To serve whole models on this machine alone, choose **Pod → Alone**.
 | Field | What to enter |
 | --- | --- |
 | Network | **Production** |
-| Node id | Your node id from the first step, exactly as approved (lower case) |
+| Node id | Your node id from the first step, exactly as shown (lower case) |
 | Node token | The token from the first step |
 | Input / output price | USD per million tokens. Leave both empty (0) to serve free |
 
