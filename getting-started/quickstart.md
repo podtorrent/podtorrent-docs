@@ -1,7 +1,15 @@
 # Quickstart: send your first request
 
-You need a PodTorrent API key. Keys start with `pt_` and are issued by the
-PodTorrent team. Self-service sign-up isn't available yet.
+You need a PodTorrent API key. Keys start with `pt_`. To get one:
+
+1. Sign in to the [dashboard](https://dashboard.podtorrent.com) with your
+   email. We send you a one-time code, and your first sign-in creates your
+   account.
+2. Add funds under **Billing**. You pay per token at each node's price.
+3. Make a key under **API keys**. It's shown once, so copy it somewhere safe.
+
+Want to try a model before writing code? Paste your key into the
+[playground](https://playground.podtorrent.com) and chat in the browser.
 
 ## 1. See which models are available
 

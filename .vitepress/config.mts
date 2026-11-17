@@ -20,14 +20,25 @@ export default defineConfig({
   srcExclude: ['SUMMARY.md', 'CONTRIBUTING.md', 'node_modules/**'],
   head: [['link', { rel: 'icon', href: '/favicon.svg' }]],
   markdown: {
-    config: (md) => gitbookSyntax(md),
+    config: (md) => {
+      gitbookSyntax(md)
+      // GitBook-style links to a folder's README.md: the page is served at the folder URL.
+      const open = md.renderer.rules.link_open
+      md.renderer.rules.link_open = (tokens, idx, opts, env, self) => {
+        const href = tokens[idx].attrGet('href')
+        if (href && !/^[a-z]+:/i.test(href)) tokens[idx].attrSet('href', href.replace(/(^|\/)README\.md(?=$|#)/, '$1'))
+        return open ? open(tokens, idx, opts, env, self) : self.renderToken(tokens, idx, opts)
+      }
+    },
     container: { infoLabel: 'Note', tipLabel: 'Tip', warningLabel: 'Warning', dangerLabel: 'Danger' },
   },
   themeConfig: {
     nav: [
       { text: 'API', link: '/getting-started/quickstart' },
       { text: 'Run a node', link: '/getting-started/node-quickstart' },
+      { text: 'Playground', link: 'https://playground.podtorrent.com' },
       { text: 'Dashboard', link: 'https://dashboard.podtorrent.com' },
+      { text: 'podtorrent.com', link: 'https://podtorrent.com' },
     ],
     sidebar: sidebarFrom(summary),
     search: { provider: 'local' },
