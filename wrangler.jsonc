@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  // Static docs site: `npm run build` writes .vitepress/dist, `npm run deploy` uploads it.
+  "name": "podtorrent-docs",
+  "compatibility_date": "2026-09-01",
+  "assets": {
+    "directory": ".vitepress/dist",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  },
+  // Cloudflare creates and manages the DNS record and certificate for this hostname.
+  "routes": [{ "pattern": "docs.podtorrent.com", "custom_domain": true }]
+}
