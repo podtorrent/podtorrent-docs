@@ -2,6 +2,7 @@ import { copyFileSync, mkdirSync, writeFileSync } from 'node:fs'
 import { dirname, join, resolve } from 'node:path'
 import { defineConfig } from 'vitepress'
 import { gitbookSyntax } from './gitbook'
+import { mermaidFence } from './mermaid'
 import { readSummary, sidebarFrom } from './summary'
 
 const root = resolve(__dirname, '..')
@@ -29,6 +30,7 @@ export default defineConfig({
         if (href && !/^[a-z]+:/i.test(href)) tokens[idx].attrSet('href', href.replace(/(^|\/)README\.md(?=$|#)/, '$1'))
         return open ? open(tokens, idx, opts, env, self) : self.renderToken(tokens, idx, opts)
       }
+      mermaidFence(md)
     },
     container: { infoLabel: 'Note', tipLabel: 'Tip', warningLabel: 'Warning', dangerLabel: 'Danger' },
   },

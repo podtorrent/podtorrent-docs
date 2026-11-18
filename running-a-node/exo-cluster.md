@@ -11,8 +11,16 @@ models that are too big for any one Mac. With the PodTorrent agent, the
 whole cluster joins the network as **one node**. It uses one node token and
 one manifest, and its earnings go to one place.
 
-```
-client ─► PodTorrent ◄══ outbound TLS ══ agent ─► exo ─► Mac A ⇄ Mac B ⇄ Mac C
+```mermaid
+flowchart LR
+    client["Client"] --> pt["PodTorrent"]
+    pt <==>|"outbound TLS<br/>(opened by the agent)"| agent["Agent"]
+    agent --> exo["exo"]
+    exo --> cluster
+    subgraph cluster["Your Macs"]
+        direction TB
+        a["Mac A"] <--> b["Mac B"] <--> c["Mac C"]
+    end
 ```
 
 You run exo as it comes. The agent runs on one of the Macs and needs no open
