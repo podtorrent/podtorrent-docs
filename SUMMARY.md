@@ -21,6 +21,7 @@
 
 * [What you need](running-a-node/requirements.md)
 * [Use the PodTorrent app](running-a-node/podtorrent-app.md)
+* [Run without a screen (headless)](running-a-node/headless.md)
 * [Install the agent](running-a-node/install.md)
 * [Write your manifest](running-a-node/manifest.md)
 * [Set prices and tiers](running-a-node/prices-and-tiers.md)
