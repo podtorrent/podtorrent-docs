@@ -20,6 +20,7 @@ Already run a model server? Use the
   | `windows-x64-cuda` | Windows, NVIDIA |
   | `linux-x64-cuda` | Linux desktop, NVIDIA |
   | `linux-x64-rocm` | Linux desktop, AMD Ryzen AI Max |
+  | `macos-arm64-headless` | macOS over SSH (no display), Apple silicon |
   | `linux-x64-rocm-headless` | Linux over SSH (no display), AMD Ryzen AI Max |
   | `linux-arm64-jetson-headless` | NVIDIA Jetson AGX Orin over SSH (JetPack 6 or 7) |
 
@@ -82,25 +83,17 @@ The token is saved in the PodTorrent data folder, readable by your user only.
 To change it, click **Change token**. To stop serving the network, click
 **Leave**; your machine keeps running its models for you.
 
-### On a headless Linux box
+### On a machine without a screen
 
-`podtorrent setup` checks the machine, installs what the GPU needs, starts
-PodTorrent as a background service, suggests a model and layers that fit,
-downloads them, and offers to join the network. Afterwards:
-
-| Command | What it does |
-| --- | --- |
-| `podtorrent join` / `podtorrent leave` | Join or leave the network |
-| `podtorrent top` | Live view of what this machine serves |
-| `podtorrent doctor` | Checks everything and writes one file for support, with your token removed |
-| `sudo loginctl enable-linger $USER` | Keep it running after you log out, and start it at boot |
+See [Run without a screen (headless)](headless.md): `podtorrent setup` walks
+you through it, joining the network included.
 
 **NVIDIA Jetson AGX Orin.** The install command picks the Jetson build on a
 Jetson, and there is no desktop build for Jetson. You need JetPack 6 or 7
 (`cat /etc/nv_tegra_release` shows your L4T version: R36 is JetPack 6, R38 or
-R39 is JetPack 7), and your user in the `video` group. On another JetPack
-version, setup stops and says so. For the most GPU speed, set the maximum power
-mode first: `sudo nvpmodel -m 0 && sudo jetson_clocks`.
+R39 is JetPack 7). On another JetPack version, setup stops and says so. For the
+most GPU speed, set the maximum power mode first:
+`sudo nvpmodel -m 0 && sudo jetson_clocks`.
 
 ## Things to know
 
